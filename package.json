@@ -1,0 +1,10 @@
+{
+  "name": "blogsley-apollo",
+  "version": "0.0.1",
+  "description": "Blogsley Apollo Server",
+  "main": "index.js",
+  "repository": "https://github.com/blogsley/blogsley-apollo",
+  "author": "Kurtis Fields",
+  "license": "MIT",
+  "private": true
+}
