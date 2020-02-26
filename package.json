@@ -6,5 +6,29 @@
   "repository": "https://github.com/blogsley/blogsley-apollo",
   "author": "Kurtis Fields",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "nodemon -w src --ext ts --exec ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@auto-relay/typeorm": "^0.12.5",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/graphql": "^14.5.0",
+    "@types/jsonwebtoken": "^8.3.7",
+    "apollo-server": "^2.10.1",
+    "auto-relay": "^0.12.5",
+    "bcryptjs": "^2.4.3",
+    "graphql": "^14.6.0",
+    "graphql-relay": "^0.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^4.1.1",
+    "type-graphql": "^0.17.6",
+    "typeorm": "^0.2.22"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  }
 }
