@@ -1,3 +1,4 @@
+import { injectable, inject } from 'inversify';
 import { Resolver, Query, Mutation, Arg, ID } from "type-graphql";
 import { Post } from "./post.entity";
 import { PostService } from "./post.service";
@@ -5,9 +6,13 @@ import { PostInput } from "./post.input";
 
 import { RelayedQuery, RelayLimitOffset, RelayLimitOffsetArgs } from 'auto-relay';
 
+import TYPE from '../inversify.types';
+
+@injectable()
 @Resolver(of => Post)
 export class PostResolver {
-  constructor(private readonly postService: PostService = PostService.getInstance()) {}
+  // constructor(private readonly postService: PostService = PostService.getInstance()) {}
+  constructor(@inject(TYPE.PostService) private readonly postService: PostService) {}
 
   @RelayedQuery(() => Post)
   async allPosts(

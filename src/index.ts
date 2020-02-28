@@ -8,6 +8,8 @@ import { TypeOrmConnection } from '@auto-relay/typeorm'
 import { AutoRelayConfig } from 'auto-relay'
 new AutoRelayConfig({ orm: () => TypeOrmConnection })
 
+import container from './inversify.config';
+
 import { AuthResolver } from "./auth/auth.resolver";
 import { UserResolver } from "./user/user.resolver";
 import { PostResolver } from "./post/post.resolver";
@@ -15,6 +17,7 @@ import { PostResolver } from "./post/post.resolver";
 async function generateSchema(): Promise<GraphQLSchema> {
   try {
     const schema = await buildSchema({
+      container,
       resolvers: [
         AuthResolver,
         UserResolver,

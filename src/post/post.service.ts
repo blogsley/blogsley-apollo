@@ -1,15 +1,21 @@
+import { injectable, inject } from 'inversify';
+import TYPE from '../inversify.types';
+
 import { Repository, getRepository } from "typeorm";
 
 import { Post } from "./post.entity";
 import { PostInput } from "./post.input";
 
+@injectable()
 export class PostService {
   private static instance: PostService;
 
-  constructor(
-    private postRepository: Repository<Post>
-  ){}
+  // constructor( private postRepository: Repository<Post>){}
+  constructor( @inject(TYPE.PostRepository) private postRepository: Repository<Post>){}
 
+  public static getRepository(): Repository<Post> {
+    return getRepository(Post)
+  }
   public static getInstance(): PostService {
     if (!PostService.instance) {
       PostService.instance = new PostService(getRepository(Post));

@@ -1,3 +1,4 @@
+import { injectable } from 'inversify';
 import * as bcryptjs from 'bcryptjs';
 // import { Response } from 'express';
 import { Arg, Resolver, Mutation } from 'type-graphql';
@@ -19,6 +20,7 @@ class LogIn {
   @Field() readonly token: string;
 }
 
+@injectable()
 @Resolver()
 export class AuthResolver {
   constructor(
