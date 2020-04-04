@@ -57,18 +57,18 @@ export class AuthResolver {
   /*
   @Mutation()
   async signup(
-    @Args('signUpInput') signUpInputDto: SignUpInputDto,
+    @Args('signupInput') signupInputDto: SignupInputDto,
     @ResGql() res: Response,
   ) {
     const emailExists = await this.prisma.client.$exists.user({
-      email: signUpInputDto.email,
+      email: signupInputDto.email,
     });
     if (emailExists) {
       throw Error('Email is already in use');
     }
-    const password = await bcryptjs.hash(signUpInputDto.password, 10);
+    const password = await bcryptjs.hash(signupInputDto.password, 10);
 
-    const user = await this.prisma.client.createUser({ ...signUpInputDto, password });
+    const user = await this.prisma.client.createUser({ ...signupInputDto, password });
 
     const jwt = this.jwt.sign({ id: user.id });
     res.cookie('token', jwt, { httpOnly: true });

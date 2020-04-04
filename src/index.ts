@@ -48,7 +48,7 @@ async function main() {
       }
     },
   });
-  await server.listen(3000);
+  await server.listen(5000);
   console.log("Server has started!");
 }
 

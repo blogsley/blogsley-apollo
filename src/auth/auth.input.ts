@@ -12,7 +12,7 @@ export class LoginInput {
 }
 
 @InputType()
-export class SignUpInput {
+export class SignupInput {
   @Field()
   @IsEmail()
   readonly email: string;
