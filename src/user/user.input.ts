@@ -6,4 +6,5 @@ export class UserInput {
   @Field() readonly email: string;
   @Field() readonly firstName: string;
   @Field() readonly lastName: string;
+  @Field() readonly password: string;
 }

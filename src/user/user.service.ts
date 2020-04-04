@@ -1,20 +1,16 @@
+import { injectable, inject } from 'inversify';
+import TYPE from '../inversify.types';
+
 import { Repository, getRepository } from "typeorm";
 
 import { User } from "./user.entity";
 import { UserInput } from "./user.input";
 
+@injectable()
 export class UserService {
-  private static instance: UserService;
-
-  constructor(
-    private userRepository: Repository<User>
-  ){}
-
-  public static getInstance(): UserService {
-    if (!UserService.instance) {
-      UserService.instance = new UserService(getRepository(User));
-    }
-    return UserService.instance;
+  constructor( @inject(TYPE.UserRepository) private userRepository: Repository<User>){}
+  public static getRepository(): Repository<User> {
+    return getRepository(User)
   }
 
   async createUser(data: UserInput): Promise<User> {

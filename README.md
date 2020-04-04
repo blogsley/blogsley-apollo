@@ -16,3 +16,9 @@ $ yarn install
 # development
 $ yarn start
 ```
+
+## Pushing the Schema to the [Apollo Registry](https://www.apollographql.com/)
+
+```bash
+npx apollo service:push --endpoint=http://localhost:5000
+```
