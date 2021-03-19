@@ -22,3 +22,9 @@ $ yarn start
 ```bash
 npx apollo service:push --endpoint=http://localhost:5000
 ```
+
+## Loading fixtures
+
+```bash
+fixtures ./fixtures --config ./typeorm.config.ts --sync --require=ts-node/register --require=tsconfig-paths/register
+```

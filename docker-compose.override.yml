@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+
+  blogsley:
+    environment:
+      - DEBUG=TRUE
+      - S3_HOST=host.docker.internal:9000
+      - MEDIA_HOST=localhost:8001
