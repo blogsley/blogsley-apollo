@@ -39,6 +39,6 @@ export class PostService {
   }
 
   async findById(id: string) {
-    return this.postRepository.findOne(id)
+    return this.postRepository.findOneBy({id})
   }
 }

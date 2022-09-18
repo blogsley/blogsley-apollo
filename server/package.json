@@ -11,29 +11,28 @@
     "start": "nodemon -w src --ext ts --exec ts-node src/index.ts"
   },
   "dependencies": {
-    "@auto-relay/typeorm": "^0.12.5",
-    "@types/bcrypt": "^3.0.0",
+    "@auto-relay/typeorm": "^0.14.0",
+    "@types/bcrypt": "^5.0.0",
     "@types/bcryptjs": "^2.4.2",
-    "@types/graphql": "^14.5.0",
-    "@types/graphql-relay": "^0.4.11",
-    "@types/jsonwebtoken": "^8.3.7",
-    "apollo-server": "^2.10.1",
-    "auto-relay": "^0.12.5",
-    "bcrypt": "^4.0.1",
-    "bcryptjs": "^2.4.3",
-    "graphql": "^14.6.0",
-    "graphql-relay": "^0.6.0",
-    "inversify": "^5.0.1",
+    "@types/jsonwebtoken": "^8.5.9",
+    "apollo-server": "^3.10.2",
+    "auto-relay": "^0.14.0",
+    "bcrypt": "^5.0.1",
+    "class-validator": "^0.13.2",
+    "graphql": "^16.6.0",
+    "graphql-relay": "^0.10.0",
+    "inversify": "^6.0.1",
     "jsonwebtoken": "^8.5.1",
+    "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
-    "pg": "^8.5.1",
-    "type-graphql": "^0.17.6",
-    "typeorm": "^0.2.22"
+    "type-graphql": "^1.1.1",
+    "typeorm": "^0.3.9"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.8.2",
-    "typeorm-fixtures-cli": "^1.9.1"
+    "@types/node": "^18.7.18",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typeorm-fixtures-cli": "^3.0.1",
+    "typescript": "^4.8.3"
   }
 }

@@ -39,11 +39,6 @@ async function main() {
   console.log(schema);
   const server = new ApolloServer({
     schema,
-    playground: {
-      settings: {
-        // 'editor.theme': 'light',
-      }
-    },
   });
   await server.listen(5000);
   console.log("Server has started!");
